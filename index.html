@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rohith V - Computer Science Student & Information Security Specialist Portfolio. Explore projects, skills, and educational timeline.">
+    <title>Rohith V | Cybersecurity Professional & Full-Stack Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+
+    <!-- Background Elements -->
+    <canvas id="cyber-particles"></canvas>
+    <div class="grid-overlay"></div>
+    <div class="bg-glow blob-1"></div>
+    <div class="bg-glow blob-2"></div>
+    <div class="bg-glow blob-3"></div>
+
+    <!-- Loading Animation -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span>ROHITH</span><span class="dot-accent">.V</span>
+            </div>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+            <div class="loader-text">INITIALIZING SECURE PROTOCOLS...</div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-box">R</span><span class="logo-text">Rohith V</span>
+            </a>
+            <nav class="nav-links-container" id="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#timeline" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-nav btn-talk">
+                    <span>Let's Talk</span>
+                    <i data-lucide="arrow-right" class="nav-btn-icon"></i>
+                </a>
+                <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <nav class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#skills" class="mobile-nav-link">Skills</a>
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#timeline" class="mobile-nav-link">Education</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <a href="#contact" class="btn btn-drawer btn-talk-drawer">
+                <span>Let's Talk</span>
+                <i data-lucide="arrow-right"></i>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section scroll-reveal">
+            <div class="hero-centered-container container">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Available for internships</span>
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="accent-color-text">Rohith V</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span id="typing-text"></span><span class="cursor-blink">|</span>
+                </h2>
+                <p class="hero-bio">
+                    Third-year B.Tech Computer Science student at VIT Vellore, specializing in Information Security. I build secure, scalable software and I'm on a mission to become a cybersecurity professional protecting the systems that power our world.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn btn-primary btn-hero-primary">
+                        <span>View Projects</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-hero-secondary">
+                        <span>Contact Me</span>
+                    </a>
+                    <a href="./Rohith_V_Resume.pdf" class="btn btn-secondary btn-hero-secondary btn-resume" download="Rohith_V_Resume.pdf">
+                        <i data-lucide="download"></i>
+                        <span>Resume</span>
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/vrohit1k9" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rohith-v-3646a3393" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9" rx="1"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="mailto:vrohith1009@gmail.com" class="social-icon" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">01 // IDENTITY</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="about-layout-grid">
+                    <div class="about-image-card glass-card">
+                        <div class="about-image-wrapper">
+                            <div class="image-border-glow"></div>
+                            <img src="profile.png" alt="Rohith V Profile" class="about-image">
+                        </div>
+                    </div>
+                    <div class="about-content-column">
+                        <div class="about-card glass-card">
+                            <div class="card-icon-wrapper">
+                                <i data-lucide="graduation-cap" class="card-icon"></i>
+                            </div>
+                            <h3>Education</h3>
+                            <div class="edu-details">
+                                <h4 class="edu-degree">Bachelor of Technology (B.Tech)</h4>
+                                <p class="edu-major">Computer Science and Engineering (Information Security)</p>
+                                <div class="edu-meta">
+                                    <span class="edu-school">VIT Vellore</span>
+                                    <span class="edu-year">Expected Graduation: 2028</span>
+                                </div>
+                                <div class="edu-location">
+                                    <i data-lucide="map-pin"></i>
+                                    <span>Chennai, Tamil Nadu, India</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-card glass-card">
+                            <div class="card-icon-wrapper">
+                                <i data-lucide="award" class="card-icon"></i>
+                            </div>
+                            <h3>Certifications</h3>
+                            <div class="edu-details" style="margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                                <h4 class="edu-degree">Full Stack Development MasterClass</h4>
+                                <p class="edu-major">NoviTech R&D Private Limited</p>
+                                <div class="edu-meta">
+                                    <span class="edu-year">Dec 2025 — Jan 2026</span>
+                                </div>
+                                <p class="objective-text" style="font-size: 0.9rem; margin-top: 10px;">
+                                    30-day certification covering full-stack web development fundamentals and project-based practice.
+                                </p>
+                            </div>
+                            <div class="edu-details">
+                                <h4 class="edu-degree">Generative AI</h4>
+                                <p class="edu-major">IBM Career Education Program</p>
+                                <div class="edu-meta">
+                                    <span class="edu-year">May 2026 — June 2026</span>
+                                </div>
+                                <p class="objective-text" style="font-size: 0.9rem; margin-top: 10px;">
+                                    Successfully completed a certification covering Generative AI fundamentals, prompt engineering, and AI-powered application concepts through the IBM Career Education Program.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-card glass-card">
+                            <div class="card-icon-wrapper">
+                                <i data-lucide="target" class="card-icon"></i>
+                            </div>
+                            <h3>Career Objective</h3>
+                            <p class="objective-text">
+                                My objective is to build a successful career in cybersecurity by combining strong programming skills with modern security practices. I am actively learning full-stack development and software engineering while preparing myself for internship opportunities where I can contribute, learn, and grow.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">02 // CAPABILITIES</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="skills-grid">
+                    <div class="skills-category-card glass-card">
+                        <div class="skills-category-header">
+                            <i data-lucide="code-2" class="category-icon"></i>
+                            <h3>Programming</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">C++ / C</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Object-Oriented Programming (OOP)</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category-card glass-card">
+                        <div class="skills-category-header">
+                            <i data-lucide="layout" class="category-icon"></i>
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React.js</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML / CSS</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category-card glass-card">
+                        <div class="skills-category-header">
+                            <i data-lucide="server" class="category-icon"></i>
+                            <h3>Backend & Databases</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js / Express.js</span>
+                                    <span class="skill-percentage">30%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 30%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MongoDB</span>
+                                    <span class="skill-percentage">30%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 30%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">SQL</span>
+                                    <span class="skill-percentage">30%</span>
+                                </div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 30%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category-card glass-card">
+                        <div class="skills-category-header">
+                            <i data-lucide="cpu" class="category-icon"></i>
+                            <h3>Tools & Specializations</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skills-badge-container">
+                                <div class="skill-badge"><i data-lucide="terminal"></i> VS Code</div>
+                                <div class="skill-badge"><i data-lucide="code"></i> Eclipse</div>
+                                <div class="skill-badge"><i data-lucide="git-branch"></i> Git / GitHub</div>
+                                <div class="skill-badge"><i data-lucide="cloud"></i> Google Cloud</div>
+                                <div class="skill-badge"><i data-lucide="shield-check"></i> Cybersecurity</div>
+                                <div class="skill-badge"><i data-lucide="lock"></i> Info Security</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">03 // OFFERINGS</span>
+                    <h2 class="section-title">Services & Readiness</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="services-wrapper">
+                    <div class="services-grid">
+                        <div class="service-card glass-card">
+                            <div class="service-icon-box">
+                                <i data-lucide="laptop" class="service-icon"></i>
+                            </div>
+                            <h3>Full-Stack Development</h3>
+                            <p>Building responsive, modular, and scalable web applications using React.js, Node.js, Express, and modern databases.</p>
+                            <ul class="service-points">
+                                <li><i data-lucide="check-circle-2"></i> Clean API integrations</li>
+                                <li><i data-lucide="check-circle-2"></i> Structured backend frameworks</li>
+                                <li><i data-lucide="check-circle-2"></i> Fluid interactive interfaces</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="internship-alert-box glass-card">
+                        <div class="internship-alert-content">
+                            <div class="alert-icon-ring">
+                                <i data-lucide="info" class="alert-pulse-icon"></i>
+                            </div>
+                            <div class="alert-text-group">
+                                <h4>Open for Internships & Projects</h4>
+                                <p>Currently seeking internship opportunities to apply and expand my technical skills in real-world professional projects.</p>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-primary alert-cta">
+                            <span>Hire Rohith</span>
+                            <i data-lucide="user-plus"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">04 // PORTFOLIO</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card glass-card">
+                        <div class="project-header">
+                            <span class="project-date"><i data-lucide="calendar"></i> April 2026</span>
+                            <span class="project-status">Featured</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Clean Sweep</h3>
+                            <p class="project-subtitle">Hostel Room Cleaning Management Platform</p>
+                            <p class="project-description">
+                                Developed a full-stack web application that automates hostel room-cleaning bookings and service management. The platform allows students to reserve cleaning slots, monitor service status in real time, and submit feedback. It also includes an administrator dashboard with block-wise filtering, live status tracking, and QR-code-based cleaning verification.
+                            </p>
+                        </div>
+                        <div class="project-tags">
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>MongoDB</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/vrohit1k9" target="_blank" rel="noopener noreferrer" class="btn btn-icon-only" aria-label="View Source on GitHub">
+                                <i data-lucide="github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="#" class="btn btn-icon-only disabled" aria-label="Live Demo (Coming Soon)">
+                                <i data-lucide="external-link"></i>
+                                <span>Demo</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card glass-card">
+                        <div class="project-header">
+                            <span class="project-date"><i data-lucide="calendar"></i> June 2026</span>
+                            <span class="project-status">Active</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Student Task Tracker</h3>
+                            <p class="project-subtitle">Student Record Management System</p>
+                            <p class="project-description">
+                                Built a responsive web-based student record management system featuring student registration, search, record updates, and secure database storage. The application provides an intuitive interface backed by MongoDB for reliable and efficient data management.
+                            </p>
+                        </div>
+                        <div class="project-tags">
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/vrohit1k9" target="_blank" rel="noopener noreferrer" class="btn btn-icon-only" aria-label="View Source on GitHub">
+                                <i data-lucide="github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="#" class="btn btn-icon-only disabled" aria-label="Live Demo (Coming Soon)">
+                                <i data-lucide="external-link"></i>
+                                <span>Demo</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Timeline -->
+        <section id="timeline" class="timeline-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">05 // EDUCATION ROADMAP</span>
+                    <h2 class="section-title">Timeline</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="timeline-wrapper">
+                    <div class="timeline-track"></div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-card-header">
+                                <span class="timeline-date">2024 — 2028 (Expected)</span>
+                                <h3>B.Tech Computer Science and Engineering</h3>
+                            </div>
+                            <p class="timeline-sub">Specialization in Information Security</p>
+                            <h4 class="timeline-inst">VIT Vellore</h4>
+                            <p class="timeline-desc">
+                                Focusing on secure coding techniques, database systems, networks, cryptography, object-oriented concepts, and vulnerability assessments. Collaborating on tech stacks to build robust, secure solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">06 // CONNECTION</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info-panel">
+                        <div class="info-card glass-card">
+                            <div class="info-icon-wrapper">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="info-content">
+                                <span>Email Address</span>
+                                <a href="mailto:vrohith1009@gmail.com">vrohith1009@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="info-card glass-card">
+                            <div class="info-icon-wrapper">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <span>Phone Number</span>
+                                <a href="tel:+919361035112">+91 9361035112</a>
+                            </div>
+                        </div>
+                        <div class="info-card glass-card">
+                            <div class="info-icon-wrapper">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="info-content">
+                                <span>Location</span>
+                                <p>Chennai, Tamil Nadu, India</p>
+                            </div>
+                        </div>
+                        <div class="info-card glass-card">
+                            <div class="info-icon-wrapper">
+                                <i data-lucide="git-branch"></i>
+                            </div>
+                            <div class="info-content">
+                                <span>Professional Networks</span>
+                                <div class="networks-row">
+                                    <a href="https://github.com/vrohit1k9" target="_blank" rel="noopener noreferrer" class="network-link">GitHub <i data-lucide="arrow-up-right"></i></a>
+                                    <a href="https://www.linkedin.com/in/rohith-v-3646a3393" target="_blank" rel="noopener noreferrer" class="network-link">LinkedIn <i data-lucide="arrow-up-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-panel glass-card">
+                        <div class="form-title-bar">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="terminal-title">message_sender.sh</span>
+                        </div>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <div class="input-wrapper">
+                                        <i data-lucide="user" class="input-icon"></i>
+                                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <div class="input-wrapper">
+                                        <i data-lucide="at-sign" class="input-icon"></i>
+                                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="bookmark" class="input-icon"></i>
+                                    <input type="text" id="subject" name="subject" required placeholder="Collaboration Opportunity">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <div class="input-wrapper align-start">
+                                    <i data-lucide="message-square" class="input-icon textarea-icon"></i>
+                                    <textarea id="message" name="message" required placeholder="Hi Rohith, I would love to connect about..."></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Send Message</span>
+                                <i data-lucide="send" id="send-icon"></i>
+                            </button>
+                            <div id="form-feedback" class="form-feedback-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <a href="#home" class="footer-logo">
+                    ROHITH<span class="dot-accent">.V</span>
+                </a>
+                <p class="footer-desc">Aspiring Cybersecurity Professional & Full-Stack Developer</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-socials">
+                    <a href="https://github.com/vrohit1k9" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rohith-v-3646a3393" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9" rx="1"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="mailto:vrohith1009@gmail.com" class="social-icon" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </a>
+                </div>
+                <p class="footer-copy">© 2026 Rohith V. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
