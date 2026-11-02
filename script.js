@@ -307,9 +307,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingSpan = document.getElementById('typing-text');
     const roles = [
         "Aspiring Cybersecurity Professional",
+        "Information Security Specialist",
         "Full-Stack Developer",
-        "API Developer",
-        "Software Developer"
+        "AI & Systems Engineer"
     ];
     let roleIndex = 0;
     let charIndex = 0;
